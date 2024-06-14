@@ -1,0 +1,43 @@
+###
+# GET all products //index
+GET http://127.0.0.1:8000/api/products
+
+###
+# POST create a new product //store
+POST http://127.0.0.1:8000/api/products
+Content-Type: application/json
+
+{
+    "name": "Kemeja Blouse keren wanita",
+    "desc": "berbahan dari kain sutra yang lembut",
+    "qty": 250,
+    "price": 300000
+}
+
+###
+# GET template for creating a new product
+GET http://127.0.0.1:8000/api/products/create
+
+###
+# GET a single product by ID //show
+GET http://127.0.0.1:8000/api/products/7
+
+###
+# GET product details for editing by ID //edit
+GET http://127.0.0.1:8000/api/products/6/edit
+
+###
+# PUT update a product by ID //update
+PUT http://127.0.0.1:8000/api/products/7
+Content-Type: application/json
+
+{
+    "name": "Kemeja Wanita blouse",
+    "desc": "Berbahan dari bahan premium dan terbuat dari kain sutra",
+    "qty": 500,
+    "price": 350000
+}
+
+###
+# DELETE a product by ID //delete
+DELETE http://127.0.0.1:8000/api/products/6
